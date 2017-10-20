@@ -1,0 +1,9 @@
+version: '3.1'
+services:
+  scuttlebot:
+    image: bmordan/stmo
+    build: .
+    volumes:
+      - /Users/bernardmordan/.ssb:/root/.ssb
+    ports:
+      - 8080:8080
