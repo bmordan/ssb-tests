@@ -13,6 +13,8 @@ module.exports = function (sbot, server) {
         if (err) return console.error(err)
 
         msgs.forEach((msg) => console.log(msg.value))
+        sbot.close()
+        server.close()
       })
     )
   })

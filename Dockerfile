@@ -7,17 +7,17 @@ RUN apt-get update \
   && curl -sL https://deb.nodesource.com/setup_8.x | bash - \
   && apt-get install -y nodejs
 
-COPY package.json /tmp/package.json
-
 WORKDIR /tmp
+
+COPY package.json package.json
 
 RUN npm install --only=production && npm cache clear --force
 RUN mkdir -p /usr/src/app \
-  && cp -a /tmp/node_modules /usr/src/app \
-  && mkdir -p /root/.ssb
+  && cp -a node_modules /usr/src/app \
+  && cp package.json /usr/src/app
 
 WORKDIR /usr/src/app
 
-COPY lib .
+COPY src .
 
 CMD ["node", "main.js"]

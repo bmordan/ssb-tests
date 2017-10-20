@@ -1,9 +1,10 @@
 {
-  "name": "ssb-med-log-001",
+  "name": "stmo",
   "version": "0.1.0",
-  "description": "ssb loging learnings 001",
+  "description": "ssb loging learnings",
   "main": "main.js",
   "scripts": {
+    "key-gen": "node key-gen",
     "start": "node main",
     "test": "standard"
   },
