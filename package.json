@@ -5,13 +5,15 @@
   "main": "main.js",
   "scripts": {
     "key-gen": "node key-gen",
-    "start": "node main",
+    "up": "docker-compose up --build",
+    "start": "node src/main.js",
     "test": "standard"
   },
   "author": "bmordan",
   "license": "MIT",
   "dependencies": {
     "pull-stream": "^3.6.1",
+    "rivescript": "^1.17.2",
     "scuttlebot": "^10.4.10",
     "ssb-client": "^4.5.1",
     "ssb-keys": "^7.0.12"
